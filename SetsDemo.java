@@ -1,6 +1,8 @@
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
+import java.util.NavigableSet;
+import java.util.TreeSet;
 import java.util.Set;
 import java.lang.Integer;
 public class SetsDemo {
@@ -18,13 +20,13 @@ public class SetsDemo {
         lhs.add(30);
         lhs.add(40);
         lhs.add(50);
-        System.out.println(lhs);
-        for(int v:lhs)System.out.print(v+" ");
-        System.out.println();
-        Iterator<Integer> it=set.iterator();
-        while(it.hasNext()){
-            System.out.println(it.next());
-        }
+        // System.out.println(lhs);
+        // for(int v:lhs)System.out.print(v+" ");
+        // System.out.println();
+        // Iterator<Integer> it=set.iterator();
+        // while(it.hasNext()){
+        //     System.out.println(it.next());
+        // }
         // System.out.println(set);
 
         //addAll->Union
@@ -67,5 +69,14 @@ public class SetsDemo {
 
         // Integer a[]=set.toArray(new Integer[0]);
         // for(int val:a)System.out.print(val+" ");
+
+        NavigableSet<Integer> ns=new TreeSet<>();
+        ns.add(1);
+        ns.add(3);
+        ns.add(7);
+        ns.add(4);
+        System.out.println(ns);
+        System.out.println(ns.floor(2));//equals or just lesser value
+        System.out.println(ns.ceiling(5));//equals or just greater value
     }
 }
