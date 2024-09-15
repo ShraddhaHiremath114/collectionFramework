@@ -5,6 +5,8 @@ import java.util.NavigableSet;
 import java.util.TreeSet;
 import java.util.Set;
 import java.lang.Integer;
+import java.util.SortedSet;
+import java.util.TreeSet;
 public class SetsDemo {
     public static void main(String[] args) {
         Set<Integer> set=new HashSet<>();
@@ -56,7 +58,7 @@ public class SetsDemo {
         // System.out.println(s2);
 
         //retailAll-> common / intersection
-        // System.out.println(set.retainAll(s2));
+        System.out.println(set.retainAll(s2));
 
         // s2.clear();
         // System.out.println(s2.isEmpty());
@@ -70,13 +72,25 @@ public class SetsDemo {
         // Integer a[]=set.toArray(new Integer[0]);
         // for(int val:a)System.out.print(val+" ");
 
-        NavigableSet<Integer> ns=new TreeSet<>();
-        ns.add(1);
-        ns.add(3);
-        ns.add(7);
-        ns.add(4);
-        System.out.println(ns);
-        System.out.println(ns.floor(2));//equals or just lesser value
-        System.out.println(ns.ceiling(5));//equals or just greater value
+        // NavigableSet<Integer> ns=new TreeSet<>();
+        // ns.add(1);
+        // ns.add(3);
+        // ns.add(7);
+        // ns.add(4);
+        // System.out.println(ns);
+        // System.out.println(ns.floor(2));//equals or just lesser value
+        // System.out.println(ns.ceiling(5));//equals or just greater value
+
+        SortedSet<Integer> ss=new TreeSet<>();
+        ss.add(30);
+        ss.add(70);
+        ss.add(10);
+        ss.add(40);
+        ss.add(15);
+        System.out.println(ss);
+        System.out.println(ss.first());
+        System.out.println(ss.last());
+        System.out.println(ss.headSet(60));
+        System.out.println(ss.tailSet(60));
     }
 }
