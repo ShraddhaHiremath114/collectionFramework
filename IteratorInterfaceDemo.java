@@ -31,6 +31,8 @@ public class IteratorInterfaceDemo {
             it.remove();
         }
         System.out.println(list);
-         */
+     
+        */
+        //complete collections
     }
 }
